@@ -5,11 +5,11 @@ on:
     branches:
       - 'main'
     paths:
-      - 'src/scripts'
+      - 'src/scripts/working_with_databases.bal'
 
 jobs:
   build:
-    runs-on: ubumtu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -26,3 +26,8 @@ jobs:
 
       - name: Update Ballerina Dev Website
         run: python3 src/scripts/update_html.py
+        env:
+          BALLERINA_BOT_USERNAME: ${{ secrets.BALLERINA_BOT_USERNAME }}
+          BALLERINA_BOT_TOKEN: ${{ secrets.BALLERINA_BOT_TOKEN }}
+          BALLERINA_BOT_EMAIL: ${{ secrets.BALLERINA_BOT_EMAIL }}
+          BALLERINA_REVIEWER_BOT_TOKEN: ${{ secrets.BALLERINA_REVIEWER_BOT_TOKEN }}
