@@ -7,7 +7,7 @@ from github import Github, InputGitAuthor, GithubException
 from bs4 import BeautifulSoup
 
 ballerina_bot_username = os.environ['BALLERINA_BOT_USERNAME']
-ballerina_bot_token = os.environ[]'BALLERINA_BOT_TOKEN']
+ballerina_bot_token = os.environ['BALLERINA_BOT_TOKEN']
 ballerina_bot_email = os.environ['BALLERINA_BOT_EMAIL']
 ballerina_reviewer_bot_token = os.environ['BALLERINA_REVIEWER_BOT_TOKEN']
 
