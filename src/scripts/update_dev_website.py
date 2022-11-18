@@ -27,7 +27,7 @@ def main():
         
     commit_message = 'Update Ballerina in Action samples'
     try:
-        update = commit_file('components/home-page/bal-action/working-with-databases.md', updated_file, 'update-working-with-databases', commit_message)[0]
+        update = commit_file('components/home-page/bal-action/action-bbe/working-with-databases.md', updated_file, 'update-working-with-databases', commit_message)[0]
 
         if update:
             pr_title = '[Automated] Update Ballerina in Action samples'
